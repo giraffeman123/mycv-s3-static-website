@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./img/elliotwave.ico">
+    <title>Elliot Martinez Palomino</title>
+</head>
+
+<body>
+
+    <aside class="site-sidebar">
+        <div class="person">
+            <div class="person-avatar">
+                <img class="avatar" src="./img/elliotwave.jpg" />
+            </div>
+
+            <div class="person-content">
+                <h1 class="person-title p-name"> Eduardo Elliot Martinez Palomino </h1>
+                <h2 class="js-person-subtitle p-job-title" id="personSubtitle"> DevOps Engineer </h2>
+            </div>
+
+            <label class="toggle_btn">
+                <input type="checkbox" onclick="changeProfession(this)">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <nav class="block-main-navigation">
+            <div class="nav-menu-bar">
+                <div class="social-icons" id="social-icons">
+                    <a rel="me" href="mailto:elliotmtz12@gmail.com" title="mail: elliotmtz12@gmail.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a rel="me" href="https://www.linkedin.com/in/eduardo-palomino-4b281b191/"
+                        title="linkedin: elliot martinez palomino">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a rel="me" href="https://github.com/giraffeman123" title="git: elliot">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <a href="javascript:void(0);" class="js-menu-extend-button" onclick="showMenuItems()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+            <div class="js-nav-menu-items" id="menuItems">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio" id="menuItem2">Portfolio</a></li>
+                <!--<li><a href="#music">Music</a></li>-->
+            </div>
+        </nav>
+
+        <div class="block-social-icons" id="block-social-icons">
+            <a rel="me" href="mailto:elliotmtz12@gmail.com" title="mail: elliotmtz12@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a rel="me" href="https://www.linkedin.com/in/eduardo-palomino-4b281b191/"
+                title="linkedin: elliot martinez palomino">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a rel="me" href="https://github.com/giraffeman123" title="git: elliot">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>          
+        </div>
+    </aside>
+
+    <div class="site-main">
+        <div class="about" id="about">
+            <h1>About Me</h1>
+            <p>
+                I'm a <b id="personProfessionDescription">DevOps Engineer</b> eager to learn new things and fulfill my work and personal expectations. <br />
+                I love my profession and I'm committed to my self-improvement.
+            </p>
+
+            <style>
+                .languages>h4,
+                .languages>h5 {
+                    margin: 4px;
+                    text-align: center;
+                }
+
+                .loading_bar {
+                    position: relative;
+                    margin: 0px;
+                    height: 16px;
+                    text-align: center;
+                }
+
+                .loading_bar>span {
+                    position: relative;
+                    display: block;
+                    height: 100%;
+                }
+
+                .loading_bar>span::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(to right, #02e2ff, #00ff00);
+                    animation: loading 2s 1;
+                }
+
+                @keyframes loading {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 100%;
+                    }
+                }
+            </style>
+
+            <h3>Academic Info</h3>
+            <div class="academic_info">
+                <ul style="list-style-type: square;">
+                    <li> Universidad Autonoma de Baja California</li>
+                    (August 2015 - December 2020)
+                    <li> Université Pierre et Marie Curie (Paris 6)</li>
+                    (August 2018 - January 2019)
+                </ul>
+            </div>
+
+            <h3>Languages</h3>
+            <div class="languages">
+                <h4>Spanish</h4>
+                <h5>100%</h5>
+                <div class="loading_bar"><span style="width: 100%;"></span></div>
+                <h4>French</h4>
+                <h5>70%</h5>
+                <div class="loading_bar"><span style="width: 70%;"></span></div>
+                <h4>English</h4>
+                <h5>90%</h5>
+                <div class="loading_bar"><span style="width: 90%;"></span></div>
+                <h4>German</h4>
+                <h5>10%</h5>
+                <div class="loading_bar"><span style="width: 10%;"></span></div>
+            </div>
+        </div>
+
+        <div class="js-portfolio" id="portfolio">
+            <div class="portfolio-title">
+                <h1 class="typing">Portfolio</h1>
+                <p>See my works below.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2022-Now</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">UABC</h1>
+                        <p>Currently at UABC i maintain, manage & monitor a kubernetes cluster.</p>
+                        <p>I containerize applications and then package and deploy them with the help of Helm Charts
+                            taking into account the monitoring, auto-scaling and exposure of services outside the
+                            cluster. </p>
+                        <p>I also maintain and develop API's from time to time & do tech support when it is needed.</p>
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Swagger</li>
+                                <li>Spring Framework</li>
+                                <li>Grafana</li>
+                                <li>Keda</li>
+                                <li>nginx/nginx-ingress</li>
+                                <li>MariaDB</li>
+                                <li>Nodejs</li>
+                                <li>Fluent Bit</li>
+                                <li>Docker</li>
+                                <li>Prometheus</li>
+                                <li>Helm</li>
+                                <li>Mirantis Kubernetes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2020-2022</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">SDL GROUP</h1>
+                        <p>At SDL Group I maintained and developed software related to accounting.</p>
+                        <p>I re-factored software components, normalized databases and developed windows services that
+                            consume SAT(mexican IRS) web services, send emails, do backend processing and web scraping.
+                        </p>
+                        <p>I as well did tech support when it was needed :).</p>
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Telerik</li>
+                                <li>Entity Framework</li>
+                                <li>TFS</li>
+                                <li>C#</li>
+                                <li>Windows Services</li>
+                                <li>BootStrap4</li>
+                                <li>SQL Server</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2019</p>
+                        <p>October-December</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">Gamacon</h1>
+                        <p> During my stay at Gamacon I developed a casual multiplayer game in Unity that added scores
+                            to a server in NodeJs. </p>
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Unity</li>
+                                <li>Fork</li>
+                                <li>NodeJs</li>
+                                <li>SQL Server</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2019</p>
+                        <p>July-September</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">Furukawa</h1>
+                        <p>During my stay at Furukawa QA department I developed a project that managed control plans and
+                            failures mode(for it's acronym FMEA)</p>
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Django</li>
+                                <li>SQLite</li>
+                                <li>BootStrap4</li>
+                                <li>AWS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2018</p>
+                        <p>July-September</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">FRALUCS</h1>
+                        <p>During my stay at FRALUCS I reverse engineered the inventory management and bill tracking
+                            software of the company.</p>
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Hibernate</li>
+                                <li>Jersey</li>
+                                <li>Primefaces</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2017-2018</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="blink-caret">Instituto de Ingenieria UABC</h1>
+                        <p>
+                            Collaborated in a master's degree renewable enery project
+                            in which I developed a data processing system for an anemometer sensor CSAT3 3-D that is
+                            patented
+                        </p>
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Technologies Used</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="music" id="music">
+            <div class="portfolio-title">
+                <h1 class="typing">Music</h1>
+                <p>See my works below.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2020</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">Lo-Fi</h1>
+                        <p>Some chill beats to relax & concentrate. </p>
+                        <img class="album-cover" src="./img/lofi-album.jpg" />
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Genre</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>#Lo-Fi</li>
+                                <li>#ChillHop</li>
+                            </ul>
+                            <button class="project_technologies-btn" onclick="location.href = 'https://elliotwave.bandcamp.com/album/-';">See More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_element">
+                    <div class="timeline_element-logo">
+                        <p>2019-2020</p>
+                    </div>
+                    <div class="timeline_element-content">
+                        <h1 class="typing">Anemoia</h1>
+                        <p>A concept album inspired by The Legend Of Zelda, Radiohead & a lot of nostalgia.</p>
+                        <img class="album-cover" src="./img/anemoia-album.png" />
+
+                        <div class="project_technologies">
+                            <div class="project_technologies-title">Genre</div>
+                            <ul class="project_technologies-tech_tags">
+                                <li>#16 bit</li>
+                                <li>#ambient</li>
+                                <li>#videogame</li>
+                                <li>#soundtrack</li>
+                            </ul>
+                            <button class="project_technologies-btn" onclick="location.href = 'https://elliotwave.bandcamp.com/album/anemoia';">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+    </div>
+
+    <script>
+        function showMenuItems() {
+            var menuItems = document.getElementById("menuItems");
+            var menuItemsStyle = getComputedStyle(menuItems);
+
+            if (menuItemsStyle.display == "none") {
+                menuItems.style.display = "block";
+            } else {
+                menuItems.style.display = "none";
+            }
+
+        }
+
+        function changeProfession(toggleBtn) {
+            if (toggleBtn.checked == true) {
+                var professionDescription = document.getElementById("personProfessionDescription");
+                professionDescription.innerText = "Musician/Composer";
+                
+                var professionTitle = document.getElementById("personSubtitle");
+                professionTitle.innerText = "Musician/Composer";
+
+                var menuItem = document.getElementById("menuItem2");
+                menuItem.innerText = "Music";
+                
+                var socialIcons = document.getElementById("social-icons");
+                var blockSocialIcons = document.getElementById("block-social-icons");
+                socialIcons.innerHTML = ` 
+                    <a rel="me" href="https://open.spotify.com/artist/5R559XGI6J1YQX2usZbaNv?si=Q5zE7OhbR_6JQDxmlJ82hQ" title="spotify: elliotwave">
+                        <i class="fa fa-spotify" aria-hidden="true"></i>
+                    </a>                  
+                    <a rel="me" href="https://www.facebook.com/elliotwavemusic" title="facebook: elliotwave">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a rel="me"
+                        href="https://www.youtube.com/channel/UCtmb3wOHvG2FScpbHEJrDVA/featured?fbclid=IwAR0WR4oGETBb9Tcya_wTFDIk_9Otv9OOvguVXfzhrSM19c3cgDBy7H2CQCY"
+                        title="youtube: elliotwave">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>                  
+                    <a rel="me" href="https://elliotwave.bandcamp.com/music" title="bandcamp: elliotwave">
+                        <i class="fa fa-bandcamp"></i>
+                    </a>                                    
+                `;
+                blockSocialIcons.innerHTML = ` 
+                    <a rel="me" href="https://open.spotify.com/artist/5R559XGI6J1YQX2usZbaNv?si=Q5zE7OhbR_6JQDxmlJ82hQ" title="spotify: elliot">
+                        <i class="fa fa-spotify" aria-hidden="true"></i>
+                    </a>                     
+                    <a rel="me" href="https://www.facebook.com/elliotwavemusic" title="facebook: elliotwave">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a rel="me"
+                        href="https://www.youtube.com/channel/UCtmb3wOHvG2FScpbHEJrDVA/featured?fbclid=IwAR0WR4oGETBb9Tcya_wTFDIk_9Otv9OOvguVXfzhrSM19c3cgDBy7H2CQCY"
+                        title="youtube: elliotwave">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>    
+                    <a rel="me" href="https://elliotwave.bandcamp.com/music" title="bandcamp: elliotwave">
+                        <i class="fa fa-bandcamp"></i>
+                    </a>                                                 
+                `;
+
+                var portfolio = document.getElementById("portfolio");
+                portfolio.innerHTML = `            
+                    <div class="portfolio-title">
+                        <h1 class="typing">Music</h1>
+                        <p>See my works below.</p>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2020</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">Lo-Fi</h1>
+                                <p>Some chill beats to relax & concentrate. </p>
+                                <img class="album-cover" src="./img/lofi-album.jpg" />
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Genre</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>#Lo-Fi</li>
+                                        <li>#ChillHop</li>
+                                    </ul>
+                                    <button class="project_technologies-btn" onclick="location.href = 'https://elliotwave.bandcamp.com/album/-';">See More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2019-2020</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">Anemoia</h1>
+                                <p>A concept album inspired by The Legend Of Zelda, Radiohead & a lot of nostalgia.</p>
+                                <img class="album-cover" src="./img/anemoia-album.png" />
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Genre</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>#16 bit</li>
+                                        <li>#ambient</li>
+                                        <li>#videogame</li>
+                                        <li>#soundtrack</li>
+                                    </ul>
+                                    <button class="project_technologies-btn" onclick="location.href = 'https://elliotwave.bandcamp.com/album/anemoia';">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            } else {
+                var professionDescription = document.getElementById("personProfessionDescription");
+                professionDescription.innerText = "DevOps Engineer";
+
+                var professionTitle = document.getElementById("personSubtitle");
+                professionTitle.innerText = "DevOps Engineer";
+
+                var menuItem = document.getElementById("menuItem2");
+                menuItem.innerText = "Portfolio";
+
+                var socialIcons = document.getElementById("social-icons");
+                var blockSocialIcons = document.getElementById("block-social-icons");
+                socialIcons.innerHTML = `
+                    <a rel="me" href="mailto:elliotmtz12@gmail.com" title="mail: elliotmtz12@gmail.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a rel="me" href="https://www.linkedin.com/in/eduardo-palomino-4b281b191/"
+                        title="linkedin: elliot martinez palomino">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a rel="me" href="https://github.com/giraffeman123" title="git: elliot">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>                
+                `;
+                blockSocialIcons.innerHTML = `
+                    <a rel="me" href="mailto:elliotmtz12@gmail.com" title="mail: elliotmtz12@gmail.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a rel="me" href="https://www.linkedin.com/in/eduardo-palomino-4b281b191/"
+                        title="linkedin: elliot martinez palomino">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a rel="me" href="https://github.com/giraffeman123" title="git: elliot">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>                
+                `;
+
+                var portfolio = document.getElementById("portfolio");
+                portfolio.innerHTML = `
+                    <div class="portfolio-title">
+                        <h1 class="typing">Portfolio</h1>
+                        <p>See my works below.</p>
+                    </div>
+
+                    <div class="timeline">
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2022-Now</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">UABC</h1>
+                                <p>Currently at UABC i maintain, manage & monitor a kubernetes cluster.</p>
+                                <p>I containerize applications and then package and deploy them with the help of Helm Charts
+                                    taking into account the monitoring, auto-scaling and exposure of services outside the
+                                    cluster. </p>
+                                <p>I also maintain and develop API's from time to time & do tech support when it is needed.</p>
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Swagger</li>
+                                        <li>Spring Framework</li>
+                                        <li>Grafana</li>
+                                        <li>Keda</li>
+                                        <li>nginx/nginx-ingress</li>
+                                        <li>MariaDB</li>
+                                        <li>Nodejs</li>
+                                        <li>Fluent Bit</li>
+                                        <li>Docker</li>
+                                        <li>Prometheus</li>
+                                        <li>Helm</li>
+                                        <li>Mirantis Kubernetes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2020-2022</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">SDL GROUP</h1>
+                                <p>At SDL Group I maintained and developed software related to accounting.</p>
+                                <p>I re-factored software components, normalized databases and developed windows services that
+                                    consume SAT(mexican IRS) web services, send emails, do backend processing and web scraping.
+                                </p>
+                                <p>I as well did tech support when it was needed :).</p>
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Telerik</li>
+                                        <li>Entity Framework</li>
+                                        <li>TFS</li>
+                                        <li>C#</li>
+                                        <li>Windows Services</li>
+                                        <li>BootStrap4</li>
+                                        <li>SQL Server</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2019</p>
+                                <p>October-December</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">Gamacon</h1>
+                                <p> During my stay at Gamacon I developed a casual multiplayer game in Unity that added scores
+                                    to a server in NodeJs. </p>
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Unity</li>
+                                        <li>Fork</li>
+                                        <li>NodeJs</li>
+                                        <li>SQL Server</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2019</p>
+                                <p>July-September</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">Furukawa</h1>
+                                <p>During my stay at Furukawa QA department I developed a project that managed control plans and
+                                    failures mode(for it's acronym FMEA)</p>
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Django</li>
+                                        <li>SQLite</li>
+                                        <li>BootStrap4</li>
+                                        <li>AWS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2018</p>
+                                <p>July-September</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="typing">FRALUCS</h1>
+                                <p>During my stay at FRALUCS I reverse engineered the inventory management and bill tracking
+                                    software of the company.</p>
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Hibernate</li>
+                                        <li>Jersey</li>
+                                        <li>Primefaces</li>
+                                        <li>Java</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline_element">
+                            <div class="timeline_element-logo">
+                                <p>2017-2018</p>
+                            </div>
+                            <div class="timeline_element-content">
+                                <h1 class="blink-caret">Instituto de Ingenieria UABC</h1>
+                                <p>
+                                    Collaborated in a master's degree renewable enery project
+                                    in which I developed a data processing system for an anemometer sensor CSAT3 3-D that is
+                                    patented
+                                </p>
+
+                                <div class="project_technologies">
+                                    <div class="project_technologies-title">Technologies Used</div>
+                                    <ul class="project_technologies-tech_tags">
+                                        <li>Java</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                `;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
