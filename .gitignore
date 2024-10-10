@@ -5,3 +5,4 @@ terraform.*
 .env
 aws-test.pem
 provider.tf
+dev.tfvars

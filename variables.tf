@@ -1,7 +1,11 @@
 variable "region" {
-  type    = string  
+  type = string
 }
 
-variable "bucket_name" {
+variable "main_domain_name" {
+  type = string
+}
+
+variable "static_website_domain" {
   type = string
 }

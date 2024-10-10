@@ -1,3 +1,3 @@
-output "bucket_name" {
-  value = aws_s3_bucket.this.bucket
+output "bucket_id" {
+  value = module.s3_static_website.bucket_id
 }
